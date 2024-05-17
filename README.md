@@ -18,7 +18,7 @@ To adjust the number of messages produced, modify the `TOTAL_MESSAGES` field in 
   - This parameter sets the total number of messages to be produced.
 - **PRODUCER_RUN_FOREVER**: `False`
   - This parameter determines whether the producer should run indefinitely.
-- **PRODUCER_MSG_DELAY**: `0.1`
+- **PRODUCER_MSG_DELAY**: `0`
   - This parameter sets the delay (in seconds) between producing each message.
 
 ### Sender
