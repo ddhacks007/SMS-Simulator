@@ -2,6 +2,8 @@
 
 The SMS-Simulator is an application designed to emulate the sending and receiving of SMS messages using a message broker system. It utilizes RabbitMQ for message queuing, Redis for providing unique IDs to the senders (ranging from 0 to the number of senders), ids are used to retrieve processing time and failure rate parameters, Logstash for logging, Elasticsearch for storing logs, and Kibana for monitoring the progress of messages sent, failed, and their average processing times.
 
+## Architecture Diagram
+
 ![Architecture Diagram](./screenshots/Architecture.png)
 
 ## Configuration
@@ -44,7 +46,9 @@ To change the refresh rate in a Kibana dashboard, follow these steps:
 
 4. **Save the Dashboard**: Once you've selected the desired refresh interval, you can save the dashboard if you want to retain this setting for future use.
 
-![Refresh rate](./screenshots/kibana.png)
+#### Refresh rate
+
+![](./screenshots/kibana.png)
 
 ## Steps to Run
 
