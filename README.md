@@ -27,7 +27,8 @@ ou can adjust the number of senders by modifying the `replicas` field in the Doc
 
 ![Screenshot of the sender service inside the docker-compose file ](./screenshots/Screenshot.png)
 
-To configure the mean processing time and failure rate for each sender, update the `MESSAGE_PROCESSING_TIME` and `FAILURE_RATE` parameters in the environment file. Length of `MESSAGE_PROCESSING_TIME` and `FAILURE_RATE` equals number of senders
+To configure the mean processing time and failure rate for each sender, update the `MESSAGE_PROCESSING_TIME` and `FAILURE_RATE` parameters in the environment file.
+The length of `MESSAGE_PROCESSING_TIME` and `FAILURE_RATE` must be equal to the number of senders.
 
 - **MESSAGE_PROCESSING_TIME**: `[[0.5, 0.1], [0.4, 0.1]]`
   - The first parameter is the mean processing time in seconds, and the second parameter is the standard deviation used for generating random values from gaussian distribution.
