@@ -31,7 +31,6 @@ class Sender:
         failure_rates_str = os.getenv('FAILURE_RATE')
         self.failure_rate = ast.literal_eval(failure_rates_str)[self.id]
         self.failure_count = sum(self.simulate_bernoulli_trials(self.failure_rate))
-
         self.failure_indexes = set()
 
     def simulate_bernoulli_trials(self, probability: float):

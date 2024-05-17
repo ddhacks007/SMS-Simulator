@@ -32,7 +32,7 @@ The length of `MESSAGE_PROCESSING_TIME` and `FAILURE_RATE` must be equal to the 
 
 - **MESSAGE_PROCESSING_TIME**: `[[0.5, 0.1], [0.4, 0.1]]`
   - The first parameter is the mean processing time in seconds, and the second parameter is the standard deviation used for generating random values from gaussian distribution.
-- **FAILURE_RATE**: `[[0.9], [0.9]]`
+- **FAILURE_RATE**: `[[0.3], [0.4]]`
   - This parameter sets the failure rate for each sender which will be used to generate failure count from bernoulli distribution.
 
 ### Progress Monitor
@@ -59,7 +59,7 @@ Run the following command to execute the test cases (make sure 21 test cases get
 python -m unittest tests/*.py
 ```
 
-Run the following command to start your containers:
+Run the following command to start your containers (Ignore errors in the log):
 
 ```sh
 docker-compose up
