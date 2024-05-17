@@ -85,6 +85,10 @@ Once the containers are up and running, follow these steps:
 
 By following these steps, you can import saved objects into Kibana and navigate to your desired dashboard to visualize the progress monitor.
 
+### Important Note
+
+**Note:** Please follow the steps given in the configuration section to set the refresh rate to 1 second in order to see the failure messages. If you set the failure rate to below 0.5 with 2 or more senders, the failed messages get quickly resolved because RabbitMQ internally prioritizes messages with negative acknowledgments and tries to resolve them as quickly as possible. Therefore, make sure to set the refresh rate to a very small value to observe the failed messages.
+
 Run the following command to stop your containers:
 
 ```sh
