@@ -4,4 +4,4 @@ RUN pip install -r requirements.txt
 COPY Producer/* .
 COPY RabbitMQClient.py .
 COPY Logger.py .
-CMD ["python3", "Main.py"]
+CMD ["python3 Main.py"]

@@ -18,7 +18,7 @@ To adjust the number of messages produced, modify the `TOTAL_MESSAGES` field in 
   - This parameter sets the total number of messages to be produced.
 - **PRODUCER_RUN_FOREVER**: `False`
   - This parameter determines whether the producer should run indefinitely.
-- **PRODUCER_MSG_DELAY**: `0.5`
+- **PRODUCER_MSG_DELAY**: `0.1`
   - This parameter sets the delay (in seconds) between producing each message.
 
 ### Sender
@@ -84,10 +84,6 @@ Once the containers are up and running, follow these steps:
 4. **Open a Dashboard**: Click on the `sms-simulation-dashboard` to open it.
 
 By following these steps, you can import saved objects into Kibana and navigate to your desired dashboard to visualize the progress monitor.
-
-### Important Note
-
-**Note:** Please follow the steps given in the configuration section to set the refresh rate to 1 second in order to see the failure messages. If you set the failure rate to below 0.5 with 2 or more senders, the failed messages get quickly resolved because RabbitMQ internally prioritizes messages with negative acknowledgments and tries to resolve them as quickly as possible. Therefore, make sure to set the refresh rate to a very small value to observe the failed messages.
 
 ### Dashboard
 
