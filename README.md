@@ -1,6 +1,6 @@
 # SMS-Simulator
 
-The SMS-Simulator is an advanced application designed to emulate the sending and receiving of SMS messages using a message broker system. It utilizes RabbitMQ for message queuing, Redis for providing unique IDs to the senders (used to retrieve the processing time and failure rate parameters), Logstash for logging, Elasticsearch for storing logs, and Kibana for visualizing the progress of messages sent, failed, and their processing times.
+The SMS-Simulator is an advanced application designed to emulate the sending and receiving of SMS messages using a message broker system. It utilizes RabbitMQ for message queuing, Redis for providing unique IDs to the senders (ranging from 0 to the number of senders) used to retrieve processing time and failure rate parameters, Logstash for logging, Elasticsearch for storing logs, and Kibana for visualizing the progress of messages sent, failed, and their processing times.
 
 ![Architecture Diagram](./screenshots/Architecture.png)
 
@@ -45,3 +45,31 @@ To change the refresh rate in a Kibana dashboard, follow these steps:
 4. **Save the Dashboard**: Once you've selected the desired refresh interval, you can save the dashboard if you want to retain this setting for future use.
 
 ![Refresh rate](./screenshots/kibana.png)
+
+## Steps to Run
+
+Run the following command to start your containers:
+
+```sh
+docker-compose up
+```
+
+Once the containers are up and running, follow these steps:
+
+### Importing Saved Objects
+
+1. **Go to Kibana**: Open your Kibana instance in your web browser by navigating to `http://localhost:5601`.
+2. **Navigate to Management**: Click on the "Stack Management" (or "Management" in older versions) menu in the left sidebar.
+3. **Saved Objects**: Under "Kibana", click on "Saved Objects".
+4. **Import**: Click on the "Import" button.
+5. **Upload File**: Choose the `export.ndjson` file in the repository.
+6. **Complete Import**: Click "Import" to complete the process.
+
+### Navigate to Dashboard
+
+1. **Side Navigation Bar**: Look for the side navigation bar on the left side of the screen. It has icons for different Kibana apps.
+2. **Dashboards**: Click on the "Dashboard" icon. The icon looks like a graph or a chart.
+3. **Dashboard List**: Once you click the "Dashboard" icon, you will be taken to the list of dashboards. Here, you can see all the saved dashboards.
+4. **Open a Dashboard**: Click on the `sms-simulation-dashboard` to open it.
+
+By following these steps, you can import saved objects into Kibana and navigate to your desired dashboard to visualize your data.
