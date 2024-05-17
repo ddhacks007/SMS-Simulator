@@ -1,6 +1,8 @@
 # SMS-Simulator Project
 
-The SMS-Simulator is a sophisticated application designed to emulate the sending and receiving of SMS messages via a message broker system. It leverages RabbitMQ for message queuing, Redis for caching, and Logstash for logging, ensuring efficient and reliable message processing.
+The SMS-Simulator is a sophisticated application designed to emulate the sending and receiving of SMS messages via a message broker system. It leverages RabbitMQ for message queuing, Redis for caching, and Logstash for logging, Elastic Search for storing logs, and Kibana for visualizing the progress of message-sent, failed and processing time.
+
+![Architecture Diagram](./screenshots/Architecture.png)
 
 ## Configuration
 
