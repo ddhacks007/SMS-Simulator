@@ -23,9 +23,23 @@ ou can adjust the number of senders by modifying the `replicas` field in the Doc
 
 ![Screenshot of the sender service inside the docker-compose file ](./screenshots/Screenshot.png)
 
-To configure the mean processing time and failure rate for each sender, update the `MESSAGE_PROCESSING_TIME` and `FAILURE_RATE` parameters in the environment file. Y
+To configure the mean processing time and failure rate for each sender, update the `MESSAGE_PROCESSING_TIME` and `FAILURE_RATE` parameters in the environment file. Length of `MESSAGE_PROCESSING_TIME` and `FAILURE_RATE` equals number of senders
 
 - **MESSAGE_PROCESSING_TIME**: `[[0.5, 0.1], [0.4, 0.1]]`
-  - The first parameter is the mean processing time in seconds, and the second parameter is the standard deviation.
+  - The first parameter is the mean processing time in seconds, and the second parameter is the standard deviation used for generating random values from gaussian distribution.
 - **FAILURE_RATE**: `[[0.9], [0.9]]`
-  - This parameter sets the failure rate for message processing, where each value represents a percentage (e.g., 0.9 corresponds to a 90% success rate).
+  - This parameter sets the failure rate for each sender which will be used to generate failure count from bernoulli distribution.
+
+### Progress Monitor
+
+To change the refresh rate in a Kibana dashboard, follow these steps:
+
+1. **Open the Dashboard**: Navigate to the dashboard you want to modify in Kibana.
+
+2. **Click on "Refresh" Button**: In the top-right corner of the dashboard, you'll see a "Refresh" button. Click on it.
+
+3. **Select a Refresh Interval**: A dropdown menu will appear with various options for refresh intervals. You can choose from options like 5 seconds, 10 seconds, 30 seconds, 1 minute, etc. Additionally, you can select "Off" if you don't want the dashboard to automatically refresh.
+
+4. **Save the Dashboard**: Once you've selected the desired refresh interval, you can save the dashboard if you want to retain this setting for future use.
+
+![Refresh rate](./screenshots/kibana.png)
