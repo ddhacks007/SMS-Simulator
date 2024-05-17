@@ -31,9 +31,9 @@ To configure the mean processing time and failure rate for each sender, update t
 The length of `MESSAGE_PROCESSING_TIME` and `FAILURE_RATE` must be equal to the number of senders.
 
 - **MESSAGE_PROCESSING_TIME**: `[[0.5, 0.1], [0.4, 0.1]]`
-  - The first parameter is the mean processing time in seconds, and the second parameter is the standard deviation used for generating random values from gaussian distribution.
+  - The first parameter is the mean processing time in seconds, and the second parameter is the standard deviation used for generating random values from a Gaussian distribution.
 - **FAILURE_RATE**: `[[0.3], [0.4]]`
-  - This parameter sets the failure rate for each sender which will be used to generate failure count from bernoulli distribution.
+  - This parameter sets the failure rate for each sender, which will be used to generate the failure count from a Bernoulli distribution.
 
 ### Progress Monitor
 
@@ -41,11 +41,11 @@ To change the refresh rate in a Kibana dashboard, follow these steps:
 
 1. **Open the Dashboard**: Navigate to the dashboard you want to modify in Kibana.
 
-2. **Click on "Refresh" Button**: In the top-right corner of the dashboard, you'll see a "Refresh" button. Click on it.
+2. **Click on the "Refresh" Button**: In the top-right corner of the dashboard, you'll see a clock icon. Click on it.
 
-3. **Select a Refresh Interval**: A dropdown menu will appear with various options for refresh intervals. You can choose from options like 5 seconds, 10 seconds, 30 seconds, 1 minute, etc. Additionally, you can select "Off" if you don't want the dashboard to automatically refresh.
+3. **Select a Refresh Interval**: A dropdown menu will appear. At the bottom, there will be a "Refresh" section.
 
-4. **Save the Dashboard**: Once you've selected the desired refresh interval, you can save the dashboard if you want to retain this setting for future use.
+4. **Save the Dashboard**: Once you've selected the desired refresh interval, save the dashboard to retain this setting for future use.
 
 #### Refresh rate
 
@@ -59,10 +59,20 @@ Run the following command to execute the test cases (make sure 21 test cases get
 python -m unittest tests/*.py
 ```
 
-Run the following command to start your containers (Ignore errors in the log):
+Run the following command to start your containers (Ignore connection errors in the log):
 
 ```sh
 docker-compose up
+```
+
+Run the following command to stop your containers:
+
+```sh
+docker-compose down
+```
+
+```
+docker volume prune
 ```
 
 Once the containers are up and running, follow these steps:
@@ -83,4 +93,4 @@ Once the containers are up and running, follow these steps:
 3. **Dashboard List**: Once you click the "Dashboard" icon, you will be taken to the list of dashboards. Here, you can see all the saved dashboards.
 4. **Open a Dashboard**: Click on the `sms-simulation-dashboard` to open it.
 
-By following these steps, you can import saved objects into Kibana and navigate to your desired dashboard to visualize your data.
+By following these steps, you can import saved objects into Kibana and navigate to your desired dashboard to visualize the progress monitor.
