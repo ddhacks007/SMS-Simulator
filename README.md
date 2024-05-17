@@ -52,6 +52,9 @@ To change the refresh rate in a Kibana dashboard, follow these steps:
 
 ## Steps to Run
 
+Run the following command to execute the test cases (make sure 21 test cases gets passed!):
+`python -m unittest tests/*.py`
+
 Run the following command to start your containers:
 
 ```sh
