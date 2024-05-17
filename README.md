@@ -65,16 +65,6 @@ Run the following command to start your containers (Ignore connection errors in 
 docker-compose up
 ```
 
-Run the following command to stop your containers:
-
-```sh
-docker-compose down
-```
-
-```
-docker volume prune
-```
-
 Once the containers are up and running, follow these steps:
 
 ### Importing Saved Objects
@@ -94,3 +84,13 @@ Once the containers are up and running, follow these steps:
 4. **Open a Dashboard**: Click on the `sms-simulation-dashboard` to open it.
 
 By following these steps, you can import saved objects into Kibana and navigate to your desired dashboard to visualize the progress monitor.
+
+Run the following command to stop your containers:
+
+```sh
+docker-compose down
+```
+
+```
+docker volume prune
+```
