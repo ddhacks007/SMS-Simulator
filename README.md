@@ -19,7 +19,11 @@ To adjust the number of messages produced, modify the `TOTAL_MESSAGES` field in 
 
 ### Sender
 
-To configure the mean processing time and failure rate for each sender, update the `MESSAGE_PROCESSING_TIME` and `FAILURE_RATE` parameters in the environment file. You can adjust the number of senders by modifying the `replicas` field in the Docker Compose file under the sender service.
+ou can adjust the number of senders by modifying the `replicas` field in the Docker Compose file under the sender service.
+
+![Screenshot of the sender service inside the docker-compose file ](./screenshots/Screenshot.png)
+
+To configure the mean processing time and failure rate for each sender, update the `MESSAGE_PROCESSING_TIME` and `FAILURE_RATE` parameters in the environment file. Y
 
 - **MESSAGE_PROCESSING_TIME**: `[[0.5, 0.1], [0.4, 0.1]]`
   - The first parameter is the mean processing time in seconds, and the second parameter is the standard deviation.
