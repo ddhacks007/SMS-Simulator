@@ -92,7 +92,7 @@ class TestSender(unittest.TestCase):
     
     @patch('time.sleep', return_value=None)
     @patch('random.gauss', return_value=0.2)
-    def test_failure_rate_if_achieved(self, mock_gauss, mock_sleep):
+    def test_failure_rate_is_achieved(self, mock_gauss, mock_sleep):
         for i in range(self.sender.batch_size):
             payload = {'id': i+1, 'number': '1231241241'}
             body = json.dumps(payload)
