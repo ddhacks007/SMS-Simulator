@@ -99,5 +99,5 @@ docker-compose down
 docker volume prune
 ```
 
-## System Requirements
+## OS Requirements
 - macosx
